@@ -1,31 +1,28 @@
 import React from 'react';
-import './App.scss';
-import Home from "./components/home";
-import Navigation from "./components/navigation"
-import UserButtons from "./components/user/user";
-
+// import './scss/main.scss';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Home from "./components/Home";
+import Navigation from "./components/Navigation"
+import LogRegBtn from "./components/LogRegBtns";
+import Login from "./components/user/Login";
+import Register from "./components/user/Register";
+import Logout from "./components/user/Logout";
 
 function App() {
     return (
         <>
-            <UserButtons/>
+            <LogRegBtn/>
             <Navigation/>
-            <Home/>
-            <h2>lol</h2>
+            <Router>
+                <Switch>
+                    <Route exact path='/' component={Home}/>
+                    <Route path='/logowanie' component={Login}/>
+                    <Route path='/rejestracja' component={Register}/>
+                    <Route path='/wylogowano' component={Logout}/>
+                </Switch>
+            </Router>
         </>
     );
 }
 
-
 export default App;
-
-//
-// <div>
-//
-//     <header>
-//
-//         <p className="bla__bla-bla">bla blad blas</p>
-//         <a>siema mordouuu</a>
-//
-//     </header>
-// </div>
