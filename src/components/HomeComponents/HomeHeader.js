@@ -1,16 +1,31 @@
-import React from 'react';
+import React from "react";
+// import decoration from "src/assets/Home-Hero-Image"
 
 const HomeHeader = () => {
-    return (
+  return (
+    <div className="HomeHeader__main">
+      <div className="HomeHeader__main_img">
         <div>
-            <h2 className="HomeHeader__title">Zacznij pomagać! Oddaj niechciane rzeczy w zaufane ręce</h2>
-            <img src="../assets/Decoration.svg" alt="decoration"/>
-            <div>
-                <button href="#">ODDAJ RZECZY</button>
-                <button href="#">ZORGANIZUJ ZBIÓRKĘ</button>
-            </div>
+          {/* <image src="..\assets\Home-Hero-Image.jpg" alt="Home-Hero-Image" /> */}
+          {/* <img src="..\assets\Home-Hero-Image"/> */}
+          {/* <img src=".src/assets/Home-Hero-Image.jpg"/> */}
         </div>
-    );
+      </div>
+
+      <div className="HomeHeader__main_text">
+
+        <h2 className="HomeHeader__title">
+          Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce
+        </h2>
+        {/* <img src="decoration" alt="decoration" /> */}
+        <div className="decoration"/>
+        <div className="btn__HomeHeader_buttons" >
+          <button className="btn__HomeHeader" href="#">ODDAJ  <br/> RZECZY</button>
+          <button className="btn__HomeHeader" href="#">ZORGANIZUJ<br/> ZBIÓRKĘ</button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default HomeHeader;

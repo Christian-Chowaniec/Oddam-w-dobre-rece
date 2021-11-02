@@ -2,7 +2,6 @@
   border: 1px solid $three;
   padding: 1em 1.5em;
   text-decoration: none;
-
 }
 .btn__register{
   border: 1px solid $three;
@@ -10,3 +9,21 @@
   text-decoration: none;
 
 }
+.btn__HomeHeader_buttons{
+  margin: 0 3em;
+display: flex;
+justify-content: space-between;
+
+
+  .btn__HomeHeader{
+  font-family: $font-alt;
+    font-weight: 300;
+    border: 2px solid $five;
+    width:8em;
+    height: 3.5em;
+    font-size: 2em;
+    color: $five;
+    background-color:white;
+  }
+}
+

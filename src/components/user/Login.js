@@ -23,7 +23,7 @@ const Login = () => {
                 <div>
                     <NavLink to="/rejestracja">
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                        <a className="register_button">Załóż konto</a>
+                        <button className="register_button">Załóż konto</button>
                     </NavLink>
                 </div>
 
@@ -39,3 +39,4 @@ const Login = () => {
 };
 
 export default Login;
+ 
