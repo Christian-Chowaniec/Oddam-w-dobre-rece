@@ -6,9 +6,7 @@ const HomeHeader = () => {
     <div className="HomeHeader__main">
       <div className="HomeHeader__main_img">
         <div>
-          {/* <image src="..\assets\Home-Hero-Image.jpg" alt="Home-Hero-Image" /> */}
-          {/* <img src="..\assets\Home-Hero-Image"/> */}
-          {/* <img src=".src/assets/Home-Hero-Image.jpg"/> */}
+      {/* image */}
         </div>
       </div>
 
