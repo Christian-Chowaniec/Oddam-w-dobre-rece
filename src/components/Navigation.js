@@ -1,35 +1,48 @@
 import React from "react";
-import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 
 const Navigation = () => {
-  return (
-    <Router>
-      <nav className="Navigation__menu">
-        <ul className="Navigation__menu_ul">
+	return (
+		<section>
+			<nav className="Navigation__menu">
+        
+				<ul className="Navigation__menu_ul">
+					<li>
+						<NavLink exact to="/">
+							<a className="Navigation__menu_li">Start</a>
+						</NavLink>
+					</li>
 
-          <li className="Navigation__menu_li">
-            <NavLink exact to="/">
-              Start
-            </NavLink>
-          </li>
-          <li className="Navigation__menu_li">
-            <Link to="simple_steps"> O co chodzi?</Link>
-          </li>
-          <li className="Navigation__menu_li">
-            <Link to="about_us">O nas</Link>
-          </li>
-          <li className="Navigation__menu_li">
-            <Link to="who_we_help">Fundacja i organizacje</Link>
-          </li>
-          <li className="Navigation__menu_li">
-            <Link to="contact_us">Kontakt</Link>
-          </li>
-          
-        </ul>
-      </nav>
-    </Router>
-  );
+					<li>
+						<Link to="simple_steps">
+							<a className="Navigation__menu_li">O co chodzi?</a>
+						</Link>
+					</li>
+
+					<li>
+						<Link to="about_us">
+							<a className="Navigation__menu_li">O nas</a>
+              
+						</Link>
+					</li>
+        
+
+					<li>
+						<Link to="who_we_help">
+							<a className="Navigation__menu_li">Fundacja i organizacje</a>
+						</Link>
+					</li>
+
+					<li>
+						<Link to="contact_us">
+							<a className="Navigation__menu_li">Kontakt</a>
+						</Link>
+					</li>
+				</ul>
+			</nav>
+		</section>
+	);
 };
 
 export default Navigation;

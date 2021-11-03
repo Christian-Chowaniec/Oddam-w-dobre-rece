@@ -1,12 +1,33 @@
 .btn__login{
-  border: 1px solid $three;
+  font-weight: 500;
+  color: $four;
+  // border: 1px solid $three;
+  border: none;
   padding: 1em 1.5em;
   text-decoration: none;
+  background-color:white;
+  transition: transform 0.1s ease-in-out;
+  &:hover{
+    box-shadow: 0 0 5px $four;
+    border: 1px solid $one ;
+    transition: transform 0.1s ease-in-out;
+    transform: scale(1.03);
+  }
+  
 }
 .btn__register{
+  font-weight: 500;
+  color: $four;
   border: 1px solid $three;
   padding:1em 1.5em;
   text-decoration: none;
+  background-color:white;
+  &:hover{
+    box-shadow: 0 0 5px $three;
+    // border: 1px solid $five ;
+    transition: transform 0.1s ease-in-out;
+    transform: scale(1.03);
+  }
 
 }
 .btn__HomeHeader_buttons{
