@@ -1,5 +1,5 @@
 import React from "react";
-// import decoration from "src/assets/Home-Hero-Image"
+import { Link } from "react-router-dom";
 
 const HomeHeader = () => {
 	return (
@@ -11,17 +11,20 @@ const HomeHeader = () => {
 
 				<div className="HomeHeader__main_text">
 					<h2 className="HomeHeader__title">
-						Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce
+						Zacznij pomagać! <br /> Oddaj niechciane rzeczy w zaufane ręce
 					</h2>
-					{/* <img src="decoration" alt="decoration" /> */}
 					<div className="decoration" />
 					<div className="btn__HomeHeader_buttons">
+						<Link to="/logowanie">
+							<button className="btn__HomeHeader">
+								ODDAJ <br /> RZECZY
+							</button>
+						</Link>
+						<Link to="/logowanie">
 						<button className="btn__HomeHeader">
-							ODDAJ <br/> RZECZY
+							ZORGANIZUJ <br /> ZBIÓRKĘ
 						</button>
-						<button className="btn__HomeHeader">
-							ZORGANIZUJ <br/> ZBIÓRKĘ
-						</button>
+						</Link>
 					</div>
 				</div>
 			</div>
