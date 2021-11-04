@@ -36,27 +36,13 @@
         outline: none;
         border: 1px solid $five;
         transition: transform 0.1s ease-in-out;
-        transform: scale(1.1);
-
+        transform: scale(1.05);
       }
 
-      .active {
-        text-decoration: none;
-        outline: none;
-      }
       &:active {
         text-decoration: none;
         outline: none;
       }
-      a.active {
-        text-decoration: none;
-        outline: none;
-      }
-      a active {
-        text-decoration: none;
-        outline: none;
-      }
-
     }
   }
 }
