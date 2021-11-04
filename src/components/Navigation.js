@@ -15,13 +15,19 @@ const Navigation = () => {
 					</li>
 
 					<li>
-						<Link to="simple_steps">
+						<Link to="simple_steps"
+						smooth={true}
+						duration={500}
+						offset={50}>
 							<a className="Navigation__menu_li">O co chodzi?</a>
 						</Link>
 					</li>
 
 					<li>
-						<Link to="about_us">
+						<Link to="about_us"
+						smooth={true}
+						duration={500}
+						offset={50}>
 							<a className="Navigation__menu_li">O nas</a>
               
 						</Link>
@@ -29,13 +35,19 @@ const Navigation = () => {
         
 
 					<li>
-						<Link to="who_we_help">
+						<Link to="who_we_help"
+						smooth={true}
+						duration={500}
+						offset={50}>
 							<a className="Navigation__menu_li">Fundacja i organizacje</a>
 						</Link>
 					</li>
 
 					<li>
-						<Link to="contact_us">
+						<Link to="contact_us"
+						smooth={true}
+						duration={500}
+						offset={50}>
 							<a className="Navigation__menu_li">Kontakt</a>
 						</Link>
 					</li>
