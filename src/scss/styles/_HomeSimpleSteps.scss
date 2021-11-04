@@ -1,0 +1,112 @@
+.HomeSimpleSteps__box {
+    .HomeSimpleSteps__main_title {
+        font-size: 2.5em;
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+        margin-bottom: 1em;
+
+    }
+
+    .HomeSimpleSteps__row_container {
+        background-color: $one;
+        display: flex;
+        justify-content: center;
+
+
+        .HomeSimpleSteps__row {
+            width: 80%;
+            display: flex;
+            // justify-content: space-around;
+            justify-content: space-around;
+            margin: 5% 0;
+
+
+
+            .HomeSimpleSteps__col {
+                width: 20%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: transform 0.1s ease-in-out;
+
+                &:hover {
+                    transition: transform 0.1s ease-in-out;
+                    transform: scale(1.05);
+                }
+
+                .HomeSimpleSteps__title {
+                    color: $five;
+                    font-size: 1.2em;
+                    font-weight: 500;
+                }
+
+                .HomeSimpleSteps__decoration {
+
+                    background-color: $four;
+                    height: 1px;
+                    width: 5em;
+                    margin: 1em 0;
+
+
+
+                }
+
+                .HomeSimpleSteps__description {
+
+                    color: $five;
+                    font-weight: 500;
+                }
+            }
+
+
+            .HomeSimpleSteps__icon_1 {
+                background-image: url(../../assets/Icon-1.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 6em;
+                width: 6em;
+
+            }
+
+            .HomeSimpleSteps__icon_2 {
+                background-image: url(../../assets/Icon-2.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 6em;
+                width: 6em;
+
+            }
+
+            .HomeSimpleSteps__icon_3 {
+                background-image: url(../../assets/Icon-3.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 6em;
+                width: 6em;
+
+            }
+
+            .HomeSimpleSteps__icon_4 {
+                background-image: url(../../assets/Icon-4.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 6em;
+                width: 6em;
+
+
+            }
+        }
+    }
+
+    .HomeSimpleSteps__button_center {
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+
+
+    }
+
+}

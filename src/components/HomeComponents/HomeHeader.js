@@ -16,10 +16,10 @@ const HomeHeader = () => {
 					{/* <img src="decoration" alt="decoration" /> */}
 					<div className="decoration" />
 					<div className="btn__HomeHeader_buttons">
-						<button className="btn__HomeHeader" href="#">
+						<button className="btn__HomeHeader">
 							ODDAJ <br/> RZECZY
 						</button>
-						<button className="btn__HomeHeader" href="#">
+						<button className="btn__HomeHeader">
 							ZORGANIZUJ <br/> ZBIÓRKĘ
 						</button>
 					</div>
