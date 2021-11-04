@@ -2,7 +2,7 @@ import React from "react";
 
 const HomeWhoWeHelp = () => {
 	return (
-		<section>
+		<section id="who_we_help">
 				<div className="HomeWhoWeHelp__box">
 					<h2 className="HomeWhoWeHelp__title">Komu pomagamy</h2>
 					<div className="decoration" />

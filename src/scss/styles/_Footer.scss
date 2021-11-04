@@ -1,0 +1,27 @@
+.Footer {
+    margin: 2.5em 0;
+    display: flex;
+    justify-content: center;
+
+    .Footer__items {
+        position: absolute;
+        display: flex;
+        right: 0;
+        margin-right: 4em;
+
+        .Footer__icon_fb {
+            background-image: url(../../assets/Facebook.svg);
+            background-repeat: no-repeat;
+            width: 2em;
+            height: 2em;
+            margin-right: 2em;
+        }
+
+        .Footer__icon_inst {
+            background-image: url(../../assets/Instagram.svg);
+            background-repeat: no-repeat;
+            width: 2em;
+            height: 2em;
+        }
+    }
+}
