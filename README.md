@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# Projekt - "Oddam w dobre ręce"
 
 live: https://portfolio-lab-chch.netlify.app/
