@@ -42,7 +42,7 @@ const HomeContactForms = () => {
 
 		//textarea
 		if (message.length < 120) {
-			setErrorMessage("Wiadomość musi miec conajmniej 120znaków!");
+			setErrorMessage("Wiadomość musi mieć co najmniej 120znaków!");
 			isValid = false;
 		} else {
 			setErrorMessage("");
@@ -59,7 +59,7 @@ const HomeContactForms = () => {
 			setErrorName("");
 			setErrorEmail("");
 			setErrorMessage("");
-			sendSuccess("Wiadmość została wysłana!  Wkrótce sie skontakujemy.");
+			sendSuccess("Wiadomość została wysłana!  Wkrótce sie skontaktujemy.");
 			console.log("success!");
 		}
 	};

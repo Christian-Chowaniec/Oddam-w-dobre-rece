@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../WhoWeHelp/data";
+// import data from "../WhoWeHelp/data";
 
 class HomeWhoWeHelp extends React.Component {
 

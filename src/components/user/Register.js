@@ -6,7 +6,7 @@ const Register = () => {
 		<section className="user__section_register">
 			<div>
 				<div>
-					<h1 className="user__title">Założ Konto</h1>
+					<h1 className="user__title">Załóż Konto</h1>
 					<div className="decoration" />
 				</div>
 

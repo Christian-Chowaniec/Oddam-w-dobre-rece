@@ -39,7 +39,7 @@ import HomeContactForms from "./ContactForms";
 						<div className="decoration" />
 
 						{/* <span className="validation__success">
-							Wiadmość została wysłana! <br /> Wkrótce sie skontakujemy.
+							Wiadomość została wysłana! <br /> Wkrótce sie skontaktujemy.
 						</span> */}
 
 						<div className="HomeContact__form_box">
