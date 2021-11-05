@@ -9,10 +9,10 @@
   transition: transform 0.1s ease-in-out;
 
   &:hover {
-    box-shadow: 0 0 5px $four;
-    border: 1px solid $one;
+    // box-shadow: 0 0 5px $four;
+    // border: 1px solid $one;
     transition: transform 0.1s ease-in-out;
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
 
 }
@@ -29,7 +29,7 @@
     box-shadow: 0 0 5px $three;
     // border: 1px solid $five ;
     transition: transform 0.1s ease-in-out;
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
 
 }

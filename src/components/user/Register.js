@@ -1,49 +1,50 @@
-import React from 'react';
-import {NavLink} from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Register = () => {
-    return (
-        <>
-        <h1>Założ Konto</h1>
+	return (
+		<section className="user__section">
+			<div>
+				<div>
+					<h1 className="user__title">Założ Konto</h1>
+					<div className="decoration" />
+				</div>
 
+				<div className="user__bg_register">
+					<form className="user__form">
+						<label className="user__label">
+							E-mail
+							<input className="user__input" type="email" name="email" />
+						</label>
 
-            <form>
-                <label>E-mail
-                    <input type="email"  name="email"  />
-                </label>
-            </form>
+						<label className="user__label">
+							Hasło
+							<input className="user__input" type="password" />
+						</label>
 
-            <form>
-                <label>Hasło
-                    <input type="password" />
-                </label>
-            </form>
+						<label className="user__label">
+							Powtórz Hasło
+							<input className="user__input" type="password" />
+						</label>
+					</form>
+				</div>
 
-            <form>
-                <label>Powtórz Hasło
-                    <input type="password"   />
-                </label>
-            </form>
-
-            <div>
-                <div>
-                    <NavLink to="/rejestracja">
-                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                        <a className="register_button">Załóż konto</a>
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to="/logowanie">
-                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                        <a className="login_button">Zaloguj</a>
-                    </NavLink>
-                </div>
-            </div>
-
-
-        </>
-    );
+				<div className="user__box_buttons">
+					<div className="user__buttons">
+				
+						<NavLink to="/logowanie">
+							{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+							<button className="user__btn btn_no_border">Zaloguj</button>
+						</NavLink>
+                        <NavLink to="/rejestracja">
+							{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+							<button className="user__btn btn_border ">Załóż konto</button>
+						</NavLink>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 };
 
 export default Register;

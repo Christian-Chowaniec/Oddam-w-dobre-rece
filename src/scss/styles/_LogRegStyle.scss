@@ -1,0 +1,119 @@
+.user__section {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+
+    .user__title {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size: 2.5em;
+        font-weight: 500;
+        color: $five;
+    }
+
+    .user__bg_register{
+        padding: 3em 3em;
+        background-color: $one;
+        height: 50%;
+        margin: 0 4em;
+
+        .user__form {
+            display: flex;
+            flex-direction: column;
+
+            .user__label {
+                font-weight: 700;
+                margin-top: 1em;
+                display: flex;
+                flex-direction: column;
+
+                .user__input {
+                    padding-bottom: 0.5em;
+                    background-color: transparent;
+                    margin-top: 1.5em;
+                    min-width: 17em;
+                    width: 100%;
+                    border: none;
+                    border-bottom:2px solid $four;
+
+                }
+            }
+        }
+
+    }
+    .user__bg_login {
+        padding: 2em 3em;
+        background-color: $one;
+        height: 50%;
+        margin: 0 4em;
+
+        .user__form {
+            display: flex;
+            flex-direction: column;
+
+            .user__label {
+                font-weight: 700;
+                margin-top: 1em;
+                display: flex;
+                flex-direction: column;
+
+                .user__input {
+                    padding-bottom: 0.5em;
+                    background-color: transparent;
+                    margin-top: 1.5em;
+                    min-width: 17em;
+                    width: 100%;
+                    border: none;
+                    border-bottom:2px solid $four;
+
+                }
+            }
+        }
+    }
+
+    .user__box_buttons {
+        margin-top: 2em;
+
+        .user__buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .user__buttons_logout {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .btn_border {
+        border: 1px solid $five;
+    }
+
+    .btn_no_border {
+        border: none;
+    }
+
+    .user__btn {
+        padding: 1em 1.5em;
+        color: $five;
+        text-decoration: none;
+        outline: none;
+        font-size: 1.2em;
+        background-color: transparent;
+        transition: transform 0.1s ease-in-out;
+
+        &:hover {
+            transition: transform 0.1s ease-in-out;
+            transform: scale(1.03);
+
+        }
+    }
+}
+
+
+.user__error {
+    margin-top: 0.2em;
+    // border-top: 3px solid tomato;
+    color: tomato;
+    font-weight: 600;
+}
