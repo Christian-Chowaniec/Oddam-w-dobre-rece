@@ -44,12 +44,14 @@ const Navigation = () => {
 					</li>
 
 					<li>
+					
 						<Link to="contact_us"
 						smooth={true}
 						duration={500}
 						offset={50}>
 							<a className="Navigation__menu_li">Kontakt</a>
 						</Link>
+						
 					</li>
 				</ul>
 			</nav>

@@ -5,17 +5,14 @@ const HomeContactForms = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
+
 	const [errorName, setErrorName] = useState([]);
 	const [errorEmail, setErrorEmail] = useState([]);
 	const [errorMessage, setErrorMessage] = useState([]);
 	const [sendSuccess, setSendSuccess] = useState("");
 
-	// const button1 = document.getElementById("button1");
-	// const emailField = document.getElementById("email");
-
 	const handleSubmit = e => {
 		e.preventDefault();
-
 
 		//name
 		let isValid = true;
@@ -26,20 +23,16 @@ const HomeContactForms = () => {
 		} else {
 			setErrorName("");
 		}
-
-
 		//email
 		const re =
 			/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 		if (email.length < 5 || !re.test(email.toLowerCase())) {
 			setErrorEmail("Podany email jest nieprawidłowy!");
-			isValid = true;
+			isValid = false;
 		} else {
 			setEmail("");
 		}
-
-
 		//textarea
 		if (message.length < 120) {
 			setErrorMessage("Wiadomość musi mieć co najmniej 120znaków!");
@@ -47,8 +40,6 @@ const HomeContactForms = () => {
 		} else {
 			setErrorMessage("");
 		}
-
-
 		//submit
 		if (!isValid) {
 			console.log("errors!");
@@ -63,40 +54,6 @@ const HomeContactForms = () => {
 			console.log("success!");
 		}
 	};
-
-    //  button1.addEventListener("click",function(){
-    //     const re =
-    //     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-
-    //     if (email.length < 5 || !re.test(email)) {
-	// 		setErrorEmail("Podany email jest nieprawidłowy!");
-	// 		// isValid = false;
-	// 	} else {
-	// 		setEmail("");
-	// 	}
-
-    //  })
-    // const re =
-    // /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-	// button1.addEventListener("click", function () {
-    //     // const re =
-	// 	// 	/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-	// 	const email = emailField.value;
-	// 	if (re.test(String(email).toLowerCase())) {
-	// 		setErrorMessage("Hiya Cowboy, this email will work for us 🤠");
-	// 	} else {
-	// 		setErrorMessage("Sorry, this email is not cool enough 😩");
-	// 	}
-	// });
-
-	// function validateEmail(email) {
-	// 	const re =
-	// 		/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	// 	return re.test(String(email).toLowerCase());
-	// }
 
 	return (
 		<>
@@ -155,7 +112,6 @@ const HomeContactForms = () => {
 					/>
 					
 				</div>
-                {/* <button  id="button1" type="submit">test</button> */}
 			</form>
 		</>
 	);
