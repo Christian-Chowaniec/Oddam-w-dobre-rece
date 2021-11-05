@@ -1,7 +1,6 @@
 .btn__login {
   font-weight: 500;
   color: $four;
-  // border: 1px solid $three;
   border: none;
   padding: 1em 1.5em;
   text-decoration: none;
@@ -9,12 +8,9 @@
   transition: transform 0.1s ease-in-out;
 
   &:hover {
-    // box-shadow: 0 0 5px $four;
-    // border: 1px solid $one;
     transition: transform 0.1s ease-in-out;
     transform: scale(1.05);
   }
-
 }
 
 .btn__register {
@@ -27,18 +23,15 @@
 
   &:hover {
     box-shadow: 0 0 5px $three;
-    // border: 1px solid $five ;
     transition: transform 0.1s ease-in-out;
     transform: scale(1.05);
   }
-
 }
 
 .btn__HomeHeader_buttons {
   margin: 0 3em;
   display: flex;
   justify-content: space-between;
-
 
   .btn__HomeHeader {
     font-family: $font-alt;
@@ -51,10 +44,11 @@
     background-color: white;
     margin: 0 0.5em;
     transition: transform 0.1s ease-in-out;
+
     &:hover {
       transition: transform 0.1s ease-in-out;
       transform: scale(1.05);
-  }
+    }
   }
 }
 
@@ -68,9 +62,9 @@
   color: $five;
   background-color: white;
   transition: transform 0.1s ease-in-out;
+
   &:hover {
     transition: transform 0.1s ease-in-out;
     transform: scale(1.05);
-}
-
+  }
 }

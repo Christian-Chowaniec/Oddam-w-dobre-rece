@@ -1,7 +1,7 @@
 .HomeWhoWeHelp__box {
     display: flex;
     flex-direction: column;
-        justify-content: center;
+    justify-content: center;
 
     .HomeWhoWeHelp__title {
         margin-top: 3em;
@@ -29,11 +29,12 @@
             padding: 0.8em 1em;
             margin: 0 2em;
             transition: transform 0.1s ease-in-out;
+
             &:hover {
-              outline: none;
-              border: 1px solid $five;
-              transition: transform 0.1s ease-in-out;
-              transform: scale(1.1);
+                outline: none;
+                border: 1px solid $five;
+                transition: transform 0.1s ease-in-out;
+                transform: scale(1.1);
             }
         }
     }
@@ -44,18 +45,15 @@
         display: flex;
         justify-content: center;
         text-align: center;
-       
-        .HomeWhoWeHelp__description {
-            width:30%;
-         
 
+        .HomeWhoWeHelp__description {
+            width: 30%;
         }
 
     }
-    .HomeWhoWeHelp__pagination{
+
+    .HomeWhoWeHelp__pagination {
         display: flex;
         justify-content: center;
-
     }
-
 }

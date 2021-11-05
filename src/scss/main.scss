@@ -4,17 +4,17 @@
 @import "settings/mixins";
 @import "styles/Body";
 
-
 @import "styles/Navigation";
-@import "styles/Home";
 @import "styles/LogRegButtons";
 @import "styles/Buttons";
-@import "styles/HomeHeader";
-@import "styles/HomeThreeColumns";
-@import "styles/HomeSimpleSteps";
-@import "styles/HomeAboutUs";
-@import "styles/HomeWhoWeHelp";
-@import "styles/HomeContact";
+@import "styles/HomeComponents/Header";
+@import "styles/HomeComponents/ThreeColumns";
+@import "styles/HomeComponents/SimpleSteps";
+@import "styles/HomeComponents/AboutUs";
+@import "styles/HomeComponents/WhoWeHelp";
+@import "styles/HomeComponents/Contact";
 @import "styles/Footer";
-@import "styles/LogRegStyle";
-@import "styles/Register";
+@import "styles/User/Login";
+@import "styles/User/Register";
+@import "styles/User/Errors";
+

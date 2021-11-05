@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Register = () => {
 	return (
-		<section className="user__section">
+		<section className="user__section_register">
 			<div>
 				<div>
 					<h1 className="user__title">Założ Konto</h1>
@@ -15,16 +15,20 @@ const Register = () => {
 						<label className="user__label">
 							E-mail
 							<input className="user__input" type="email" name="email" />
+                            <div className="user__error">Podany email jest nieprawidłowy!</div>
 						</label>
 
 						<label className="user__label">
 							Hasło
 							<input className="user__input" type="password" />
+                            <div className="user__error">Podane hasło jest za krótkie!</div>
 						</label>
 
 						<label className="user__label">
 							Powtórz Hasło
 							<input className="user__input" type="password" />
+                            <div className="user__error">Podane hasło nie jest takie same!</div>
+                            
 						</label>
 					</form>
 				</div>

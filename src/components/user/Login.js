@@ -15,7 +15,6 @@ const Login = () => {
 						<label className="user__label">
 							E-mail
 							<input className="user__input" type="email" name="email" />
-
 							<div className="user__error">
 								Podany email jest nieprawidłowy!
 							</div>
@@ -24,11 +23,7 @@ const Login = () => {
 						<label className="user__label">
 							Hasło
 							<input className="user__input" type="password" />
-
-							<div className="user__error"> 
-							Podane hasło jest za krótkie! 
-							</div>
-
+							<div className="user__error">Podane hasło jest za krótkie!</div>
 						</label>
 					</form>
 				</div>
