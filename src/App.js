@@ -3,10 +3,10 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Navigation from "./components/Navigation";
-import LogRegBtn from "./components/LogRegBtns";
+import LogRegBtn from "./components/LogRegButtons";
 import Login from "./components/user/Login";
 import Register from "./components/user/Register";
-// import Logout from "./components/user/Logout";
+import Logout from "./components/user/Logout";
 
 function App() {
 	return (
@@ -14,14 +14,14 @@ function App() {
         <Router>
 			<LogRegBtn />
 			<Navigation />
-			{/* <Home /> */}
+			
 
 			
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route path="/logowanie" component={Login} />
 					<Route path="/rejestracja" component={Register} />
-					{/* <Route path='/wylogowano' component={Logout}/> */}
+					<Route path='/wylogowano' component={Logout}/>
 				</Switch>
 			</Router>
 		</>

@@ -1,10 +1,10 @@
 import React from "react";
-import HomeThreeColumns from "./HomeComponents/HomeThreeColumns";
-import HomeSimpleSteps from "./HomeComponents/HomeSimpleSteps";
-import HomeAboutUs from "./HomeComponents/HomeAboutUs";
-import HomeWhoWeHelp from "./HomeComponents/HomeWhoWeHelp";
-import HomeContact from "./HomeComponents/HomeContact";
-import HomeHeader from "./HomeComponents/HomeHeader";
+import HomeThreeColumns from "./HomeComponents/ThreeColumns";
+import HomeSimpleSteps from "./HomeComponents/SimpleSteps";
+import HomeAboutUs from "./HomeComponents/AboutUs";
+import HomeWhoWeHelp from "./HomeComponents/WhoWeHelp/WhoWeHelp";
+import HomeContact from "./HomeComponents/Contact";
+import HomeHeader from "./HomeComponents/Header";
 
 const Home = () => {
 	return (
