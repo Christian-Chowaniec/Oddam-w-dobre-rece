@@ -11,6 +11,8 @@ const HomeContactForms = () => {
 	const [errorMessage, setErrorMessage] = useState([]);
 	const [sendSuccess, setSendSuccess] = useState("");
 
+	
+
 	const handleSubmit = e => {
 		e.preventDefault();
 
@@ -23,6 +25,7 @@ const HomeContactForms = () => {
 		} else {
 			setErrorName("");
 		}
+
 		//email
 		const re =
 			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -31,8 +34,9 @@ const HomeContactForms = () => {
 			setErrorEmail("Podany email jest nieprawidłowy!");
 			isValid = false;
 		} else {
-			setEmail("");
+			setErrorEmail("");
 		}
+
 		//textarea
 		if (message.length < 120) {
 			setErrorMessage("Wiadomość musi mieć co najmniej 120znaków!");
@@ -54,7 +58,9 @@ const HomeContactForms = () => {
 			setSendSuccess("Wiadomość została wysłana!  Wkrótce sie skontaktujemy.");
 			console.log("success!");
 		}
+		
 
+	
 		const dataToSend = {
 			name,
 			email,
