@@ -2,9 +2,6 @@ import React from "react";
 import { useState } from "react";
 
 const HomeContactForms = () => {
-	
-
-	// HomeContactForms
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
@@ -43,7 +40,8 @@ const HomeContactForms = () => {
 		} else {
 			setErrorMessage("");
 		}
-		//submit
+
+		// submit
 		if (!isValid) {
 			console.log("errors!");
 		} else {
@@ -53,35 +51,71 @@ const HomeContactForms = () => {
 			setErrorName("");
 			setErrorEmail("");
 			setErrorMessage("");
-			sendSuccess("Wiadomość została wysłana!  Wkrótce sie skontaktujemy.");
+			setSendSuccess("Wiadomość została wysłana!  Wkrótce sie skontaktujemy.");
 			console.log("success!");
 		}
-	};
 
-	// state={
-    //     name:'',
-    //     email:'',
-    //     message:'',
+		const dataToSend = {
+			name,
+			email,
+			message: message,
+		};
 
-    //     nameError:false,
-    //     emailError:false,
-    //     messageError:false,
-
-    //     messageSend:false,
-    //     fetchError:false
-
-    // };
-
-	const SendForm = () => {
 		fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
-			},body: JSON.stringify({
-				name, email, message
+			},
+			body: JSON.stringify(dataToSend),
+		})
+			.then(response => {
+				return response.json();
 			})
-		});
+			.then(data => {
+				console.log("Success:", data);
+			})
+			.catch(error => {
+				console.error("Error:", error);
+			});
+
+		// sendSuccess("Wiadomość została wysłana!  Wkrótce sie skontaktujemy.");
+		setName("");
+		setEmail("");
+		setMessage("");
+		e.preventDefault();
 	};
+
+	// const handleSubmit2 = e => {
+	// 	e.preventDefault();
+
+	// 	const dataToSend = {
+	// 		name,
+	// 		email,
+	// 		message: message,
+	// 	};
+
+	// 	fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+	// 		method: "POST",
+	// 		headers: {
+	// 			"Content-Type": "application/json",
+	// 		},
+	// 		body: JSON.stringify(dataToSend),
+	// 	})
+	// 		.then(response => {
+	// 			return response.json();
+	// 		})
+	// 		.then(data => {
+	// 			console.log("Success:", data);
+	// 		})
+	// 		.catch(error => {
+	// 			console.error("Error:", error);
+	// 		});
+	// 	e.preventDefault2();
+	// 	sendSuccess("Wiadomość została wysłana!  Wkrótce sie skontaktujemy.");
+	// 	setName("");
+	// 	setEmail("");
+	// 	setMessage("");
+	// };
 
 	return (
 		<>
@@ -105,7 +139,7 @@ const HomeContactForms = () => {
 					<div className="HomeContact__form_top_item">
 						<label for="email">Wpisz swój email</label>
 						<input
-							type="email"
+							type="text"
 							id="email"
 							name="email"
 							placeholder="abc@xyz.pl"
@@ -134,7 +168,7 @@ const HomeContactForms = () => {
 					<button
 						className="HomeContact__form_submit_button"
 						type="submit"
-						onClick={SendForm}
+						onClick={handleSubmit}
 					>
 						Wyślij
 					</button>
