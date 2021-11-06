@@ -3,7 +3,7 @@ import HomeThreeColumns from "./HomeComponents/ThreeColumns";
 import HomeSimpleSteps from "./HomeComponents/SimpleSteps";
 import HomeAboutUs from "./HomeComponents/AboutUs";
 import HomeWhoWeHelp from "./HomeComponents/WhoWeHelp/WhoWeHelp";
-import HomeContact from "./HomeComponents/Contact";
+import HomeContact from "./HomeComponents/Contact/Contact";
 import HomeHeader from "./HomeComponents/Header";
 
 const Home = () => {
