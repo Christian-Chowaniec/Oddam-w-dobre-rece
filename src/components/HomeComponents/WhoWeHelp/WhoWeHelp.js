@@ -15,13 +15,6 @@ class HomeWhoWeHelp extends React.Component {
 	isActive = choice =>
 		JSON.stringify(data[choice]) === JSON.stringify(this.currentChoose);
 	render() {
-
-		// let btn_active = document.querySelectorAll(".WhoWeHelp__buttons .WhoWeHelp__button");
-		// btn_active.forEach( (item)=>{
-		// 	let active_class = document.querySelector(".active");
-		// 	active_class.className= active_class.className.replace("active","");
-		// 	item.className+="active";
-		// })
 		return (
 			<section id="who_we_help">
 				<div className="WhoWeHelp__box">
