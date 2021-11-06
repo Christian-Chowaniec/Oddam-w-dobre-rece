@@ -6,24 +6,7 @@ import HomeContactForms from "./ContactForms";
 
  const HomeContact = () => {
 
-	// const [name,setName] = useState("");
-	// const [email,setEmail] = useState("");
-	// const [message,setMessage] = useState("");
-	// const [errorName,setErrorName] = useState([]);
-
-	// const handleSubmit = e => {
-    //     e.preventDefault();
-		
-
-
-	// 	let isValid = true;
-	// 	if(name.length < 3){
-	// 		setErrorName("Imię jest zbyt krótkie!");
-
-	// 	}else{
-	// 		setErrorName("");
-	// 	}
-
+	
 	return (
 		<section id="contact_us">
 			<div className="HomeContact__box">
@@ -37,11 +20,7 @@ import HomeContactForms from "./ContactForms";
 					<div className="HomeContact__items">
 						<h2 className="HomeContact__title">Skontaktuj sie z nami</h2>
 						<div className="decoration" />
-
-						{/* <span className="validation__success">
-							Wiadomość została wysłana! <br /> Wkrótce sie skontaktujemy.
-						</span> */}
-
+				
 						<div className="HomeContact__form_box">
 							
 							<HomeContactForms/>

@@ -2,6 +2,9 @@ import React from "react";
 import { useState } from "react";
 
 const HomeContactForms = () => {
+	
+
+	// HomeContactForms
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
@@ -55,9 +58,34 @@ const HomeContactForms = () => {
 		}
 	};
 
+	// state={
+    //     name:'',
+    //     email:'',
+    //     message:'',
+
+    //     nameError:false,
+    //     emailError:false,
+    //     messageError:false,
+
+    //     messageSend:false,
+    //     fetchError:false
+
+    // };
+
+	const SendForm = () => {
+		fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},body: JSON.stringify({
+				name, email, message
+			})
+		});
+	};
+
 	return (
 		<>
-			<span className="validation__success">{sendSuccess}</span>
+			<div className="validation__success">{sendSuccess}</div>
 
 			<form onSubmit={handleSubmit} className="HomeContact__form">
 				<div className="HomeContact__form_top">
@@ -70,7 +98,6 @@ const HomeContactForms = () => {
 							placeholder="Christian"
 							className="HomeContact__form_top_item_text"
 							onChange={e => setName(e.target.value)}
-                        
 						/>
 						<span className="validation__error">{errorName}</span>
 					</div>
@@ -83,7 +110,6 @@ const HomeContactForms = () => {
 							name="email"
 							placeholder="abc@xyz.pl"
 							onChange={e => setEmail(e.target.value)}
-                            
 						/>
 						<span className="validation__error">{errorEmail}</span>
 					</div>
@@ -105,12 +131,13 @@ const HomeContactForms = () => {
 				</div>
 
 				<div className="HomeContact__form_submit_box">
-					<input
+					<button
 						className="HomeContact__form_submit_button"
 						type="submit"
-						value="Wyślij"
-					/>
-					
+						onClick={SendForm}
+					>
+						Wyślij
+					</button>
 				</div>
 			</form>
 		</>
