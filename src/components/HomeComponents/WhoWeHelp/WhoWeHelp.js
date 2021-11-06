@@ -1,36 +1,71 @@
 import React from "react";
-// import data from "../WhoWeHelp/data";
+import data from "./Data";
+import ChooseButton from "./ChooseButton";
+
+import ListWithPagination from "./PaginationList";
 
 class HomeWhoWeHelp extends React.Component {
+	state = {
+		currentChoose: data.fundations,
+	};
 
-	render(){
+	handleClick = choice => this.setState({ currentChoose: data[choice] });
+
+	isActive = choice =>
+		JSON.stringify(data[choice]) === JSON.stringify(this.currentChoose);
+	render() {
+
+		// let btn_active = document.querySelectorAll(".WhoWeHelp__buttons .WhoWeHelp__button");
+		// btn_active.forEach( (item)=>{
+		// 	let active_class = document.querySelector(".active");
+		// 	active_class.className= active_class.className.replace("active","");
+		// 	item.className+="active";
+		// })
 		return (
 			<section id="who_we_help">
-				<div className="HomeWhoWeHelp__box">
-					<h2 className="HomeWhoWeHelp__title">Komu pomagamy</h2>
+				<div className="WhoWeHelp__box">
+					<h2 className="WhoWeHelp__title">Komu pomagamy</h2>
 					<div className="decoration" />
-	
-					<div className="HomeWhoWeHelp__buttons">
-						<div className="HomeWhoWeHelp__button">Fundacjom</div>
-						<div className="HomeWhoWeHelp__button">Organizacjom <br /> pozarządowym</div>
-						<div className="HomeWhoWeHelp__button">Lokalnym <br /> zbiórkom</div>
+
+					<div className="WhoWeHelp__buttons">
+						<ChooseButton
+							text={"Fundacjom"}
+							className="WhoWeHelp__button"
+							choice={"fundations"}
+							isActive={this.isActive("fundations")}
+							onClick={e => this.handleClick(e)}
+						/>
+
+						<ChooseButton
+							text={"Organizacjom pozarządowym"}
+							className="WhoWeHelp__button"
+							choice={"organizations"}
+							isActive={this.isActive("organizations")}
+							onClick={e => this.handleClick(e)}
+						/>
+
+						<ChooseButton
+							text={"Lokalnym zbiórkom"}
+							className="WhoWeHelp__button"
+							choice={"local"}
+							isActive={this.isActive("local")}
+							onClick={e => this.handleClick(e)}
+						/>
 					</div>
-	
-					<div className="HomeWhoWeHelp__description_box">
-						<p className="HomeWhoWeHelp__description">
-							W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi
-							współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i
-							czego potrzebują.
+
+					<div className="WhoWeHelp__description_box">
+						<p className="WhoWeHelp__description">
+							{this.state.currentChoose.description}
 						</p>
 					</div>
-	
-					<div className="HomeWhoWeHelp__pagination">[1] [2] [3]</div>
+
+					<div className="WhoWeHelp__pagination">
+						<ListWithPagination list={this.state.currentChoose.items} />
+					</div>
 				</div>
 			</section>
 		);
 	}
-};
+}
 
 export default HomeWhoWeHelp;
-
-
