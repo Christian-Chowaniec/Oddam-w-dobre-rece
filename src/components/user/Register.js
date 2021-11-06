@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Register = () => {
@@ -18,7 +18,7 @@ const Register = () => {
 
 		//email
 		const re =
-			/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		if (email.length < 5 || !re.test(email.toLowerCase())) {
 			setErrorEmail("Podany email jest nieprawidłowy!");
 			isValid = false;

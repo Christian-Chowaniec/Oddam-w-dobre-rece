@@ -25,7 +25,7 @@ const HomeContactForms = () => {
 		}
 		//email
 		const re =
-			/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 		if (email.length < 5 || !re.test(email.toLowerCase())) {
 			setErrorEmail("Podany email jest nieprawidłowy!");
@@ -124,7 +124,7 @@ const HomeContactForms = () => {
 			<form onSubmit={handleSubmit} className="HomeContact__form">
 				<div className="HomeContact__form_top">
 					<div className="HomeContact__form_top_item">
-						<label for="name">Wpisz swoje imię</label>
+						<label>Wpisz swoje imię</label>
 						<input
 							type="text"
 							id="name"
@@ -137,7 +137,7 @@ const HomeContactForms = () => {
 					</div>
 
 					<div className="HomeContact__form_top_item">
-						<label for="email">Wpisz swój email</label>
+						<label >Wpisz swój email</label>
 						<input
 							type="text"
 							id="email"
@@ -160,7 +160,7 @@ const HomeContactForms = () => {
 						rows="4"
 						placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 						onChange={e => setMessage(e.target.value)}
-					></textarea>
+					/>
 					<span className="validation__error">{errorMessage}</span>
 				</div>
 
