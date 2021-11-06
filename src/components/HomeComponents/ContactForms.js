@@ -78,44 +78,11 @@ const HomeContactForms = () => {
 				console.error("Error:", error);
 			});
 
-		// sendSuccess("Wiadomość została wysłana!  Wkrótce sie skontaktujemy.");
 		setName("");
 		setEmail("");
 		setMessage("");
 		e.preventDefault();
 	};
-
-	// const handleSubmit2 = e => {
-	// 	e.preventDefault();
-
-	// 	const dataToSend = {
-	// 		name,
-	// 		email,
-	// 		message: message,
-	// 	};
-
-	// 	fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
-	// 		method: "POST",
-	// 		headers: {
-	// 			"Content-Type": "application/json",
-	// 		},
-	// 		body: JSON.stringify(dataToSend),
-	// 	})
-	// 		.then(response => {
-	// 			return response.json();
-	// 		})
-	// 		.then(data => {
-	// 			console.log("Success:", data);
-	// 		})
-	// 		.catch(error => {
-	// 			console.error("Error:", error);
-	// 		});
-	// 	e.preventDefault2();
-	// 	sendSuccess("Wiadomość została wysłana!  Wkrótce sie skontaktujemy.");
-	// 	setName("");
-	// 	setEmail("");
-	// 	setMessage("");
-	// };
 
 	return (
 		<>
@@ -137,7 +104,7 @@ const HomeContactForms = () => {
 					</div>
 
 					<div className="HomeContact__form_top_item">
-						<label >Wpisz swój email</label>
+						<label>Wpisz swój email</label>
 						<input
 							type="text"
 							id="email"
@@ -178,3 +145,36 @@ const HomeContactForms = () => {
 	);
 };
 export default HomeContactForms;
+
+// const handleSubmit2 = e => {
+// 	e.preventDefault();
+
+// 	const dataToSend = {
+// 		name,
+// 		email,
+// 		message: message,
+// 	};
+
+// 	fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+// 		method: "POST",
+// 		headers: {
+// 			"Content-Type": "application/json",
+// 		},
+// 		body: JSON.stringify(dataToSend),
+// 	})
+// 		.then(response => {
+// 			return response.json();
+// 		})
+// 		.then(data => {
+// 			console.log("Success:", data);
+// 		})
+// 		.catch(error => {
+// 			console.error("Error:", error);
+// 		});
+// 	e.preventDefault2();
+// 	sendSuccess("Wiadomość została wysłana!  Wkrótce sie skontaktujemy.");
+// 	setName("");
+// 	setEmail("");
+// 	setMessage("");
+// };
+// sendSuccess("Wiadomość została wysłana!  Wkrótce sie skontaktujemy.");
