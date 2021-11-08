@@ -4,6 +4,7 @@
 }
 
 .HomeThreeColumns__row {
+    
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -27,6 +28,8 @@
         .HomeThreeColumns__description {
             color: $five;
             line-height: 2em;
+            font-family: $font-base;
         }
+
     }
 }
