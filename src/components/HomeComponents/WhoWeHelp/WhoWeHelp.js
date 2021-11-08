@@ -1,5 +1,6 @@
 import React from "react";
 import data from "./Data";
+// import data from "../../../../public/Data";
 
 import ChooseButton from "./ChooseButton";
 

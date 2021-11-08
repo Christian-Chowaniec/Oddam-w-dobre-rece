@@ -57,37 +57,65 @@ const HomeContactForms = () => {
 			setErrorMessage("");
 			setSendSuccess("Wiadomość została wysłana!  Wkrótce sie skontaktujemy.");
 			console.log("success!");
+			
+			const dataToSend = {
+				name,
+				email,
+				message: message,
+			};
+	
+			fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(dataToSend),
+			})
+				.then(response => {
+					return response.json();
+				})
+				.then(data => {
+					console.log("Success:", data);
+				})
+				.catch(error => {
+					console.error("Error:", error);
+				});
+	
+			setName("");
+			setEmail("");
+			setMessage("");
+			e.preventDefault();
 		}
 		
 
 	
-		const dataToSend = {
-			name,
-			email,
-			message: message,
-		};
+		// const dataToSend = {
+		// 	name,
+		// 	email,
+		// 	message: message,
+		// };
 
-		fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(dataToSend),
-		})
-			.then(response => {
-				return response.json();
-			})
-			.then(data => {
-				console.log("Success:", data);
-			})
-			.catch(error => {
-				console.error("Error:", error);
-			});
+		// fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+		// 	method: "POST",
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 	},
+		// 	body: JSON.stringify(dataToSend),
+		// })
+		// 	.then(response => {
+		// 		return response.json();
+		// 	})
+		// 	.then(data => {
+		// 		console.log("Success:", data);
+		// 	})
+		// 	.catch(error => {
+		// 		console.error("Error:", error);
+		// 	});
 
-		setName("");
-		setEmail("");
-		setMessage("");
-		e.preventDefault();
+		// setName("");
+		// setEmail("");
+		// setMessage("");
+		// e.preventDefault();
 	};
 
 	return (
