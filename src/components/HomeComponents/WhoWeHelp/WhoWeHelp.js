@@ -19,7 +19,7 @@ class HomeWhoWeHelp extends React.Component {
 		return (
 			<section id="who_we_help">
 				<div className="WhoWeHelp__box">
-					<h2 className="WhoWeHelp__title">Komu pomagamy</h2>
+					<h2 className="WhoWeHelp__title">Komu pomagamy?</h2>
 					<div className="decoration" />
 
 					<div className="WhoWeHelp__buttons">
