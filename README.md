@@ -5,7 +5,6 @@ projekt po zakończeniu kursu Front-end Developer w CodersLab
 - JavaScript (ES6)
 - ReactJS (React Router)
 - CSS/SASS
-- Webpack JavaScript (ES6)
 
 # Screenshoot
 ![78F25BUb9V](https://user-images.githubusercontent.com/81171876/161451796-11453ca7-abf9-4842-94bf-bb4f0475daf8.jpg)
